@@ -4,7 +4,7 @@
 A web app that creates Spotify playlists by mood (e.g. "chill evening") from user input. It uses Gemini AI to interpret the mood, and the Spotify API to get track recommendations. The app displays the track name, artist name (links to their Spotify), album art, and listen preview—if available.
 
 ## Screenshot/Videos
-![Main App Interface](screenshots/main-interface.png) 
+![Main App Interface]("C:\Users\sunda\OneDrive\Pictures\Screenshots\Screenshot 2025-09-24 221605.png") 
 *(Include a screenshot of the app with a playlist that it generated—see step 2 below)*
 
 ## Installation Instructions
