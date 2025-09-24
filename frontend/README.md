@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# AI Mood Playlist Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+A web app that creates Spotify playlists by mood (e.g. "chill evening") from user input. It uses Gemini AI to interpret the mood, and the Spotify API to get track recommendations. The app displays the track name, artist name (links to their Spotify), album art, and listen preview—if available.
 
-## Available Scripts
+## Screenshot/Videos
+![Main App Interface](screenshots/main-interface.png) 
+*(Include a screenshot of the app with a playlist that it generated—see step 2 below)*
 
-In the project directory, you can run:
+## Installation Instructions
+### Backend
+- Navigate to backend folder: `cd backend`
+- Install required packages: `pip install -r requirements.txt`
+- Run the backend server: `python app.py`
+- Access backend via `http://localhost:5000`
 
-### `npm start`
+### Frontend
+- Navigate to frontend folder: `cd frontend`
+- Install required packages: `npm install`
+- Start the app: `npm start`
+- Access frontend via `http://localhost:3000`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
+- Frontend - React.js
+- Backend - Python with Flask
+- APIs - Gemini AI, Spotify
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Completed Features
+- User input of mood (e.g. "chill evening").
+- Judgment of mood made by Gemini AI to compose a search query.
+- Spotify API to return a maximum of 5 recommendation tracks that includes track name, artist name (link to artist on Spotify), album art, and preview URL.
+- A simple responsive display for the playlist.
+- Error handling to catch failed requests.

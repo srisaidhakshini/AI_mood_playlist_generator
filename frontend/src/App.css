@@ -1,38 +1,127 @@
+/* frontend/src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for clean look */
+  color: #333; /* Dark text for readability */
+  line-height: 1.6; /* Better text spacing */
+}
+
 .App {
   text-align: center;
+  max-width: 700px; /* Slightly narrower for mobile readability */
+  margin: 0 auto; /* Centers the content */
+  padding: 20px; /* Adds breathing room */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 1.8em; /* Slightly smaller for simplicity */
+  margin-bottom: 15px;
+  color: #2c3e50; /* Calm header color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap; /* Wraps on small screens */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px; /* Consistent spacing */
+}
+
+input {
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 70%; /* Flexible width */
+  max-width: 250px; /* Caps width for large screens */
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 1em;
+  background-color: #7d8380; /* Green for positive action */
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%; /* Full width on small screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li img {
+  width: 40px; /* Smaller for simplicity */
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 4px;
+  object-fit: cover; /* Ensures image fits nicely */
+}
+
+li span {
+  flex-grow: 1; /* Takes available space */
+  text-align: left;
+  overflow: hidden; /* Prevents overflow */
+  text-overflow: ellipsis; /* Adds ellipsis for long text */
+  white-space: nowrap; /* Single line */
+  max-width: 60%; /* Limits text width */
+}
+
+li a {
+  color: #87918b; /* Matches button */
+  text-decoration: none;
+  white-space: nowrap; /* Keeps link on one line */
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 10px; /* Less padding on small screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input, button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  li img {
+    margin-bottom: 10px;
+  }
+
+  li span {
+    max-width: 100%; /* Full width on mobile */
+    white-space: normal; /* Wrap text */
+  }
+
+  li a {
+    margin-top: 5px;
   }
 }
