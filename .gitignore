@@ -336,3 +336,6 @@ build/Release
 
 # TeslaWare folder
 tesla/
+.env
+.env
+.env.local
